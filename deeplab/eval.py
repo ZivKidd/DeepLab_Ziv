@@ -35,16 +35,16 @@ flags.DEFINE_string('master', '', 'BNS name of the tensorflow server')
 
 # Settings for log directories.
 
-flags.DEFINE_string('eval_logdir', '/Users/ziv/Desktop/ziv/xception/eval', 'Where to write the event logs.')
+flags.DEFINE_string('eval_logdir', '/Users/ziv/Desktop/ziv/eval', 'Where to write the event logs.')
 
-flags.DEFINE_string('checkpoint_dir', '/Users/ziv/Desktop/ziv/xception/train', 'Directory of model checkpoints.')
+flags.DEFINE_string('checkpoint_dir', '/Users/ziv/Desktop/ziv/train', 'Directory of model checkpoints.')
 
 # Settings for evaluating the model.
 
 flags.DEFINE_integer('eval_batch_size', 1,
                      'The number of images in each batch during evaluation.')
 
-flags.DEFINE_multi_integer('eval_crop_size', [512, 512],
+flags.DEFINE_multi_integer('eval_crop_size', [513, 513],
                            'Image crop size [height, width] for evaluation.')
 
 flags.DEFINE_integer('eval_interval_secs', 60 * 5,
@@ -75,7 +75,7 @@ flags.DEFINE_string('dataset', 'mydata',
 flags.DEFINE_string('eval_split', 'val',
                     'Which split of the dataset used for evaluation')
 
-flags.DEFINE_string('dataset_dir', '/Users/ziv/Desktop/ziv/test', 'Where the dataset reside.')
+flags.DEFINE_string('dataset_dir', '/Users/ziv/Desktop/ziv/tfrecord_val', 'Where the dataset reside.')
 
 flags.DEFINE_integer('max_number_of_evaluations', 0,
                      'Maximum number of eval iterations. Will loop '

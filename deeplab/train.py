@@ -76,7 +76,7 @@ flags.DEFINE_integer('log_steps', 10,
 flags.DEFINE_integer('save_interval_secs', 4200,
                      'How often, in seconds, we save the model to disk.')
 
-flags.DEFINE_integer('save_summaries_secs', 100,
+flags.DEFINE_integer('save_summaries_secs', 300,
                      'How often, in seconds, we compute the summaries.')
 
 flags.DEFINE_boolean('save_summaries_images', True,
@@ -110,7 +110,7 @@ flags.DEFINE_float('momentum', 0.9, 'The momentum value to use')
 # When fine_tune_batch_norm=True, use at least batch size larger than 12
 # (batch size more than 16 is better). Otherwise, one could use smaller batch
 # size and set fine_tune_batch_norm=False.
-flags.DEFINE_integer('train_batch_size', 12,
+flags.DEFINE_integer('train_batch_size', 1,
                      'The number of images in each batch during training.')
 
 # For weight_decay, use 0.00004 for MobileNet-V2 or Xcpetion model variants.

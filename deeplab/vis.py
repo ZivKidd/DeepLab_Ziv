@@ -38,16 +38,16 @@ flags.DEFINE_string('master', '', 'BNS name of the tensorflow server')
 
 # Settings for log directories.
 
-flags.DEFINE_string('vis_logdir', '/Users/ziv/Desktop/ziv/xception/vis', 'Where to write the event logs.')
+flags.DEFINE_string('vis_logdir', '/Users/ziv/Desktop/ziv/vis', 'Where to write the event logs.')
 
-flags.DEFINE_string('checkpoint_dir', '/Users/ziv/Desktop/ziv/xception/train', 'Directory of model checkpoints.')
+flags.DEFINE_string('checkpoint_dir', '/Users/ziv/Desktop/ziv/train', 'Directory of model checkpoints.')
 
 # Settings for visualizing the model.
 
 flags.DEFINE_integer('vis_batch_size', 1,
                      'The number of images in each batch during evaluation.')
 
-flags.DEFINE_multi_integer('vis_crop_size', [512, 512],
+flags.DEFINE_multi_integer('vis_crop_size', [513, 513],
                            'Crop size [height, width] for visualization.')
 
 flags.DEFINE_integer('eval_interval_secs', 60 * 5,
@@ -78,7 +78,7 @@ flags.DEFINE_string('dataset', 'mydata',
 flags.DEFINE_string('vis_split', 'val',
                     'Which split of the dataset used for visualizing results')
 
-flags.DEFINE_string('dataset_dir', '/Users/ziv/Desktop/ziv/test', 'Where the dataset reside.')
+flags.DEFINE_string('dataset_dir', '/Users/ziv/Desktop/ziv/tfrecord_val', 'Where the dataset reside.')
 
 flags.DEFINE_enum('colormap_type', 'pascal', ['pascal', 'cityscapes'],
                   'Visualization colormap type.')

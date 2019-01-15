@@ -59,22 +59,22 @@ import tensorflow as tf
 FLAGS = tf.app.flags.FLAGS
 
 tf.app.flags.DEFINE_string('image_folder',
-                           './VOCdevkit/VOC2012/JPEGImages',
+                           '/Users/ziv/Desktop/ziv/第二次标记文件/road/image',
                            'Folder containing images.')
 
 tf.app.flags.DEFINE_string(
     'semantic_segmentation_folder',
-    './VOCdevkit/VOC2012/SegmentationClassRaw',
+    '/Users/ziv/Desktop/ziv/第二次标记文件/road/mask',
     'Folder containing semantic segmentation annotations.')
 
 tf.app.flags.DEFINE_string(
     'list_folder',
-    './VOCdevkit/VOC2012/ImageSets/Segmentation',
+    '/Users/ziv/Desktop/ziv/第二次标记文件/road/index',
     'Folder containing lists for training and validation')
 
 tf.app.flags.DEFINE_string(
     'output_dir',
-    './tfrecord',
+    '/Users/ziv/Desktop/ziv/第二次标记文件/road/tfrecord',
     'Path to save converted SSTable of TensorFlow examples.')
 
 
